@@ -256,7 +256,6 @@
     <ClCompile Include="src\AVCapture2.cpp" />
     <ClCompile Include="src\ChildView.cpp" />
     <ClCompile Include="src\CMaxonMotor.cpp" />
-    <ClCompile Include="src\ExaltMototrization.cpp" />
     <ClCompile Include="src\MainFrm.cpp" />
     <ClCompile Include="src\serial.cc" />
     <ClCompile Include="src\stdafx.cpp" />

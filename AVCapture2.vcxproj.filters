@@ -110,9 +110,6 @@
     <ClCompile Include="src\CMaxonMotor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\ExaltMototrization.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\AVCapture2.ico">

@@ -41,6 +41,7 @@ public:
 
     void InitializeAllDevices(); // Initialize devices at the start 
     void CloseAllDevice();
+    void ActiviateAllDevice();
     void DisableAllDevice();
     void GetCurrentPositionAllDevice(long* CurrentPosition);
     void MoveAllDevice(const long* TargetPosition);
