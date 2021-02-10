@@ -75,8 +75,8 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>..\exalt-gui\Bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>..\exalt-gui\Temp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>..\exalt-gui\DX11\Include;..\exalt-gui\src;..\exalt-gui\Include;..\exalt-gui\Common;$(IncludePath)</IncludePath>
-    <LibraryPath>..\exalt-gui\Bin\$(Platform)\Release;..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\;..\exalt-gui\DX11\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Include\;$(SolutionDir)DX11\Include;$(SolutionDir)src;$(SolutionDir)Common;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Bin\$(Platform)\Release;$(SolutionDir)Bin\$(Platform)\Debug;$(SolutionDir)Bin\$(Platform);$(SolutionDir)Lib\$(Platform);$(SolutionDir)DX11\Lib\$(Platform);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -89,8 +89,8 @@
     <LinkIncremental>false</LinkIncremental>
     <OutDir>..\exalt-gui\Bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>..\exalt-gui\Temp\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IncludePath>..\exalt-gui\DX11\Include;..\exalt-gui\src;..\exalt-gui\Include;..\exalt-gui\Common;$(IncludePath)</IncludePath>
-    <LibraryPath>..\exalt-gui\Bin\$(Platform)\Release;..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\;..\exalt-gui\DX11\Lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Include\;$(SolutionDir)DX11\Include;$(SolutionDir)src;$(SolutionDir)Common;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Bin\$(Platform)\Release;$(SolutionDir)Bin\$(Platform)\Debug;$(SolutionDir)Bin\$(Platform);$(SolutionDir)Lib\$(Platform);$(SolutionDir)DX11\Lib\$(Platform);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -105,13 +105,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\exalt-gui\Include;..\exalt-gui\Common;..\exalt-gui\DX11\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Include;$(SolutionDir)Common;$(SolutionDir)DX11\Include</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\$(Platform);..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\$(Platform);..\exalt-gui\Lib\Win32;..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>LibMWCaptured.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;dsound.lib;winmm.lib;dxguid.lib</AdditionalDependencies>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
     </Link>
@@ -160,14 +160,14 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\exalt-gui\Include;..\exalt-gui\Common;..\exalt-gui\DX11\Include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Include;$(SolutionDir)Common;$(SolutionDir)DX11\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\$(Platform);..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\$(Platform);..\exalt-gui\Lib\Win32;..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>LibMWCapture.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;dsound.lib;winmm.lib;dxguid.lib</AdditionalDependencies>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
     </Link>
