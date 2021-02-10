@@ -72,7 +72,7 @@
     <ClInclude Include="Include\CMaxonMotor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Include\ProductVer.h">
+    <ClInclude Include="src\ProductVer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

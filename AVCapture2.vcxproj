@@ -221,7 +221,6 @@
     <ClInclude Include="Common\MWDXRender.h" />
     <ClInclude Include="Include\CMaxonMotor.h" />
     <ClInclude Include="Include\Definitions.h" />
-    <ClInclude Include="Include\ProductVer.h" />
     <ClInclude Include="Include\serial.h" />
     <ClInclude Include="Include\unix.h" />
     <ClInclude Include="Include\v8stdint.h" />
@@ -230,6 +229,7 @@
     <ClInclude Include="src\ChildView.h" />
     <ClInclude Include="src\FileVer.h" />
     <ClInclude Include="src\MainFrm.h" />
+    <ClInclude Include="src\ProductVer.h" />
     <ClInclude Include="src\Resource.h" />
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
