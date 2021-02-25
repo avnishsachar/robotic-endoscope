@@ -57,6 +57,7 @@ public:
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
 	// virtual UINT MotorThread(LPVOID pParam);
+	afx_msg void OnToolsVisualindicators();
 };
 
 extern CAVCapture2App theApp;

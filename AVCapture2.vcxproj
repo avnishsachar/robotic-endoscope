@@ -111,7 +111,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\$(Platform);..\exalt-gui\Lib\Win32;..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Bin\$(Platform)\Debug;$(SolutionDir)Bin\$(Platform);$(SolutionDir)Lib\$(Platform);..\exalt-gui\Lib\Win32;..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>LibMWCaptured.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;dsound.lib;winmm.lib;dxguid.lib</AdditionalDependencies>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
     </Link>
@@ -138,7 +138,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\$(Platform);..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Bin\$(Platform)\Debug;$(SolutionDir)Bin\$(Platform);$(SolutionDir)Lib\$(Platform);..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>LibMWCaptured.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;dsound.lib;winmm.lib;dxguid.lib</AdditionalDependencies>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
     </Link>
@@ -167,7 +167,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\$(Platform);..\exalt-gui\Lib\Win32;..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Bin\$(Platform)\Debug;$(SolutionDir)Bin\$(Platform);$(SolutionDir)Lib\$(Platform);..\exalt-gui\Lib\Win32;..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>LibMWCapture.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;dsound.lib;winmm.lib;dxguid.lib</AdditionalDependencies>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
     </Link>
@@ -197,7 +197,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>..\exalt-gui\Bin\$(Platform)\Debug;..\exalt-gui\Bin\$(Platform);..\exalt-gui\Lib\$(Platform);..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)Bin\$(Platform)\Debug;$(SolutionDir)Bin\$(Platform);$(SolutionDir)Lib\$(Platform);..\exalt-gui\DX11\Lib\$(Platform);..\exalt-gui\Bin\$(Platform)\Release</AdditionalLibraryDirectories>
       <AdditionalDependencies>LibMWCapture.lib;d3d11.lib;d3dx11.lib;d3dcompiler.lib;dsound.lib;winmm.lib;dxguid.lib</AdditionalDependencies>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
     </Link>

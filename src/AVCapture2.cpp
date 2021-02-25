@@ -37,15 +37,14 @@ LONG	 ApplicationCrashHandler(EXCEPTION_POINTERS *pException);
 
 BEGIN_MESSAGE_MAP(CAVCapture2App, CWinApp)
 	ON_COMMAND(ID_APP_ABOUT, &CAVCapture2App::OnAppAbout)
+   // ON_COMMAND(IDD_DIALOG1, &CAVCapture2App)
 END_MESSAGE_MAP()
 
+int joystick_UD = 0;
+int joystick_RL = 0;
+std::string speed = "NULL";
 
-struct MotorParams
-{
-	int joystick = 0;
-	int joystick_2 = 0;
-    std::string speed = "NULL";
-};
+struct MotorParams {};
 
 // CAVCapture2App construction
 
@@ -137,22 +136,22 @@ UINT MotorThread(LPVOID pParam)
                 if (p_gain == 20) {
                     p_gain = 5;
                     std::cout << "Speed Setting: LOW" << endl;
-                    motorparams->speed = "LOW";
+                    speed = "LOW";
                 }
                 else if (p_gain == 12) {
                     p_gain = 20;
                     std::cout << "Speed Setting: FAST" << endl;
-                    motorparams->speed = "FAST";
+                    speed = "FAST";
                 }
                 else if (p_gain == 5) {
                     p_gain = 12;
                     std::cout << "Speed Setting: NORMAL" << endl;
-                    motorparams->speed = "NORMAL";
+                    speed = "NORMAL";
                 }
                 else {
                     p_gain = 20;
                     std::cout << "Speed Setting: FAST" << endl;
-                    motorparams->speed = "FAST";
+                    speed = "FAST";
                 }
             }
             if (button_home == 0 && button_home_previous == 1)
@@ -179,6 +178,7 @@ UINT MotorThread(LPVOID pParam)
             }
             else
             {
+                joystick_UD = ((int)joystick_rl - 512);
                 motor_velocity = ((int)joystick_rl - 512) * p_gain;
             }
 
@@ -191,7 +191,8 @@ UINT MotorThread(LPVOID pParam)
                 motor_velocity = 0;
             }
             else
-            {
+            {   
+                joystick_RL= ((int)joystick_ud - 512);
                 motor_velocity = ((int)joystick_ud - 512) * p_gain;
             }
 
@@ -288,7 +289,6 @@ BOOL CAVCapture2App::InitInstance()
 	CWinThread* pthread;
     TRACE("This is a debug string of text in MFC");
 	pthread = (CWinThread*) AfxBeginThread(MotorThread, (LPVOID)&pmotorparams, THREAD_PRIORITY_NORMAL, 0, 0, 0);
-
 	return TRUE;
 }
 
@@ -363,4 +363,3 @@ LONG ApplicationCrashHandler(EXCEPTION_POINTERS *pException)
 	CreateDumpFile(L"AVCapture2.dmp",pException);  
 	return EXCEPTION_EXECUTE_HANDLER;  
 }
-
